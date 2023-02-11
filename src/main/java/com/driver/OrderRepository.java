@@ -37,7 +37,7 @@ public class OrderRepository {
         return orderMap.getOrDefault(orderId,null);
     }
 
-    public DeliveryPartner getPartnerById( String partnerId){
+    public DeliveryPartner getPartnerById(String partnerId){
 
         return deliveryPartnerMap.getOrDefault(partnerId,null);
     }
@@ -63,8 +63,8 @@ public class OrderRepository {
         return orders;
     }
 
-    public Integer getCountOfUnassignedOrders(){
-        Integer countOfOrders = orderMap.size()-assignedMap.size();
+    public int  getCountOfUnassignedOrders(){
+        int countOfOrders = orderMap.size()-assignedMap.size();
 
         //Count of orders that have not been assigned to any DeliveryPartner
 

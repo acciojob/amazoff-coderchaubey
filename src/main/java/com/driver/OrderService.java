@@ -68,8 +68,8 @@ public class OrderService {
     }
 
     //9
-    public Integer getCountOfUnassignedOrders(){
-        Integer countOfOrders = orderRepository.getCountOfUnassignedOrders();
+    public int getCountOfUnassignedOrders(){
+        int countOfOrders = orderRepository.getCountOfUnassignedOrders();
 
         //Count of orders that have not been assigned to any DeliveryPartner
         return countOfOrders;
