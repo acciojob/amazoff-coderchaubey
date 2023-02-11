@@ -2,11 +2,8 @@ package com.driver;
 
 public class DeliveryPartner {
 
-    private String id;
+    private final String id;
     private int numberOfOrders;
-
-    public DeliveryPartner() {
-    }
 
     public DeliveryPartner(String id) {
         this.id = id;
@@ -17,7 +14,7 @@ public class DeliveryPartner {
         return id;
     }
 
-    public Integer getNumberOfOrders(){
+    public Integer getNumberOfOrders() {
         return numberOfOrders;
     }
 
