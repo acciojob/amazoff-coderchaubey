@@ -39,7 +39,10 @@ public class OrderRepository {
 
     public DeliveryPartner getPartnerById(String partnerId){
 
-        return deliveryPartnerMap.getOrDefault(partnerId,null);
+    if(deliveryPartnerMap.containsKey(partnerId))
+        return deliveryPartnerMap.get(partnerId);
+
+        return null;
     }
 
     public Integer getOrderCountByPartnerId(String partnerId){

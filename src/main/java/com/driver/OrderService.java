@@ -44,7 +44,9 @@ public class OrderService {
     //5
     public DeliveryPartner getPartnerById( String partnerId){
 
-       return orderRepository.getPartnerById(partnerId);
+        DeliveryPartner result = orderRepository.getPartnerById(partnerId);
+
+        return result;
     }
 
     //6

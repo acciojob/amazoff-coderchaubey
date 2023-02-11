@@ -57,9 +57,7 @@ public class OrderController {
     public ResponseEntity<DeliveryPartner> getPartnerById(@PathVariable String partnerId){
 
         DeliveryPartner deliveryPartner = orderService.getPartnerById(partnerId);
-
         //deliveryPartner should contain the value given by partnerId
-
         return new ResponseEntity<>(deliveryPartner, HttpStatus.CREATED);
     }
 
@@ -76,16 +74,13 @@ public class OrderController {
     @GetMapping("/get-orders-by-partner-id/{partnerId}")
     public ResponseEntity<List<String>> getOrdersByPartnerId(@PathVariable String partnerId){
         List<String> orders = orderService.getOrdersByPartnerId(partnerId);
-
         //orders should contain a list of orders by PartnerId
-
         return new ResponseEntity<>(orders, HttpStatus.CREATED);
     }
 
     @GetMapping("/get-all-orders")
     public ResponseEntity<List<String>> getAllOrders(){
         List<String> orders = orderService.getAllOrders();
-
         //Get all orders
         return new ResponseEntity<>(orders, HttpStatus.CREATED);
     }
